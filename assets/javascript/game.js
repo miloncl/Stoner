@@ -36,42 +36,58 @@ function lose() {
     }
 }
 
-if(!gameOver){
+
 $(".sapphire").click( function () {
-    blue = Math.floor(Math.random() * 25);
-    total += blue;
-    $("#score-total").html(total);
-    win();
-    lose();
+    if(!gameOver){
+        blue = Math.floor(Math.random() * 25);
+        total += blue;
+        $("#score-total").html(total);
+        win();
+        lose();
+    } else
+    {
+        start();
+    }
 })
 
 $(".ruby").click(function() {
-    red = Math.floor(Math.random() * 25);
-    total += red;
-    $("#score-total").html(total);
-    win();
-    lose();
+    if(!gameOver){
+        red = Math.floor(Math.random() * 25);
+        total += red;
+        $("#score-total").html(total);
+        win();
+        lose();
+    } else 
+    {
+        start();
+    }
 })
 
 $(".greenstone").click(function() {
-    green = Math.floor(Math.random() * 25);
-    total += green;
-    $("#score-total").html(total);
-    win();
-    lose();
+    if(!gameOver) {
+        green = Math.floor(Math.random() * 25);
+        total += green;
+        $("#score-total").html(total);
+        win();
+        lose();
+    } else 
+    {
+        start();
+    }
 })
 
 $(".yellowstone").click(function() {
-    yellow = Math.floor(Math.random() * 25);
-    total += yellow;
-    $("#score-total").html(total);
-    win();
-    lose();
+    if (!gameOver) {
+        yellow = Math.floor(Math.random() * 25);
+        total += yellow;
+        $("#score-total").html(total);
+        win();
+        lose();
+    } else
+    {
+        start();
+    }
 })
-}
-else
-{
-    start();
-}
+
 
 start();
