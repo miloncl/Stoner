@@ -15,4 +15,22 @@ function start() {
     $("#random-number").html(randomNumber);
 }
 
+function win() {
+    if (randomNumber == total) {
+        alert("You Win!");
+        wins++;
+        $("#wins").html(wins);
+        gameOver = true;
+    }
+}
+
+function lose() {
+    if (total > randomNumber) {
+        alert("You Lost...");
+        losses++;
+        $("#losses").html(losses);
+        gameOver = true;
+    }
+}
+
 start();
